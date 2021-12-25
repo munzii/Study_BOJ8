@@ -11,6 +11,24 @@ public class P2292 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		int n = Integer.parseInt(br.readLine());
+		int count = 1;
+		int m = 2;
+		
+		if(n==1) {
+			bw.write(String.valueOf("1"));
+		}
+		
+		else {
+			while(m<=n) {
+				m = m + (6*count);
+				count++;
+			}
+			bw.write(String.valueOf(count));
+		}
+		
+		br.close();
+		bw.flush();
+		bw.close();
 
 	}
 
